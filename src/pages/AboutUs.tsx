@@ -100,7 +100,7 @@ const AboutUs = () => {
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {[
               "Internet Services tailored for enterprises",
-              "Connectivity solutions including managed point-to-point, VPN",
+              "Connectivity solutions including managed point-to-point, VPN, and long-distance fiber networks",
               "Enterprise network design & implementation",
               "Server co-location and hosting services",
               "VPS & Cloud Solutions",

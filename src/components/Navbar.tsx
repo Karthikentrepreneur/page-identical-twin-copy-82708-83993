@@ -34,7 +34,7 @@ const Navbar = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <img
-                src="/netark-logo.png"
+                src="/netark-logo-new.png"
                 alt="NETARK Technologies Logo"
                 className="h-12 w-auto"
               />

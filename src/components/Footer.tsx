@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block mb-6">
               <img
-                src="/netark-logo.png"
+                src="/netark-logo-new.png"
                 alt="NETARK Technologies Logo"
                 className="h-16 w-auto hover:opacity-80 transition-opacity"
               />

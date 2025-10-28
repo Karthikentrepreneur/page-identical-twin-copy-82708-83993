@@ -27,7 +27,7 @@ const App = () => {
             {/* Core Pages */}
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
-            <Route path="/About-us" element={<About />} /> {/* Alias route */}
+            <Route path="/about-us" element={<About />} /> {/* Alias route */}
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/services" element={<Services />} />
             <Route path="/careers" element={<Careers />} />

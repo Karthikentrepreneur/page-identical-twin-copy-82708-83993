@@ -122,8 +122,11 @@ const Index = () => {
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 At NETARK Technologies, we deliver more than just technology — we deliver trust, 
-                reliability, and future-ready infrastructure. Specializing in Internet services, 
-                networking, data center solutions, and secure connectivity for mission-critical businesses.
+                reliability, and future-ready infrastructure. With over 20 years of experience, we specialize in Internet services, 
+                networking, data center solutions, server colocation services, hosting services, and data backup services that support mission-critical businesses.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Whether it's campus networking, cloud solutions, or IT security, our team ensures your business stays connected, protected, and scalable.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -166,12 +169,12 @@ const Index = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Comprehensive IT Solutions
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              End-to-end infrastructure solutions designed for modern enterprises
-            </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Comprehensive IT & Networking Solutions
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                End-to-end infrastructure solutions designed for modern enterprises
+              </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (

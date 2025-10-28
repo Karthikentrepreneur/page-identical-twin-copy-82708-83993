@@ -1,125 +1,181 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { Target, Heart, Handshake, Trophy } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
-import { Link } from "react-router-dom";
-import CoreValues from "@/components/CoreValues";
+import { 
+  Network, 
+  Shield, 
+  Cloud, 
+  Users, 
+  Award, 
+  Target,
+  CheckCircle2,
+  Building2
+} from "lucide-react";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const About = () => {
   useScrollToTop();
 
-  const values = [
-    {
-      icon: <Heart className="w-8 h-8 text-blue-600" />,
-      title: "Customer-Centric",
-      description: "Customer satisfaction is at the heart of everything we do"
-    },
-    {
-      icon: <Target className="w-8 h-8 text-green-600" />,
-      title: "Goal-Oriented",
-      description: "We empower businesses to achieve their goals through cutting-edge IT"
-    },
-    {
-      icon: <Trophy className="w-8 h-8 text-yellow-600" />,
-      title: "Quality Excellence",
-      description: "Delivering scalable and high-quality solutions at competitive prices"
-    },
-    {
-      icon: <Handshake className="w-8 h-8 text-purple-600" />,
-      title: "Long-term Partnerships",
-      description: "Fostering win-win relationships for sustainable growth"
-    }
+  const expertise = [
+    { icon: <Network className="w-5 h-5" />, text: "Internet Services" },
+    { icon: <Shield className="w-5 h-5" />, text: "Cybersecurity" },
+    { icon: <Cloud className="w-5 h-5" />, text: "Cloud Solutions" },
+    { icon: <Building2 className="w-5 h-5" />, text: "Data Center" }
+  ];
+
+  const partners = [
+    "Cisco", "HP", "Lenovo", "Sophos", "FortiGate", "Juniper", 
+    "Honeywell", "Dell", "Microsoft", "VMware"
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen bg-background">
       <Navbar />
-
+      
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center text-center px-4 md:px-16 py-20 bg-gradient-to-br from-[#0e256e] to-[#2571CA] text-white">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-2xl"
-        >
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-            Growing <span className="text-yellow-300">Together</span>
-          </h1>
-          <p className="text-lg md:text-xl mb-8">
-            Building lasting partnerships through innovative IT solutions.
-          </p>
-        </motion.div>
-      </section>
-
-      {/* About Section (Text Only) */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 md:px-8 max-w-4xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-gray-700 space-y-6 text-lg leading-relaxed"
-          >
-            <h2 className="text-3xl font-bold text-[#0e256e] text-center mb-6">
-              Our Commitment to our Customers
-            </h2>
-            <p>
-              At <strong className="text-[#0e256e]">INDSYS</strong>, we are a customer-centric organization committed to delivering affordable, reliable, and timely information infrastructure and support solutions. Customer satisfaction is at the heart of everything we do.
+      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-transparent">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-4xl mx-auto space-y-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+              About <span className="text-primary">NETARK</span>
+            </h1>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              Experts in Networking & Secure IT Infrastructure
             </p>
-            <p>
-              We empower businesses—from SOHOs to large corporates—to achieve their goals by leveraging <strong className="text-[#0e256e]">cutting-edge information technology</strong>. Whether it's developing custom systems tailored to unique business requirements or seamlessly integrating existing solutions, we prioritize the timely delivery of scalable and high-quality solutions at competitive prices.
-            </p>
-            <p>
-              Our strength lies in continuous investment in people, skills, infrastructure, and technology. A majority of our team comprises trained and certified professionals, equipped to handle both pre-sale and post-sale functions with efficiency and care.
-            </p>
-            <p>
-              At <strong className="text-[#0e256e]">INDSYS</strong>, we believe in fostering long-term, win-win relationships—with our customers, vendors, employees, and the communities we serve. We see this as the foundation for sustainable and profitable growth.
-            </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Core Values */}
-        <CoreValues />
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-[#0e256e] to-[#2571CA] text-white text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="max-w-3xl mx-auto"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Grow Together?
-          </h2>
-          <p className="text-xl mb-8 opacity-90">
-            Let's discuss how INDSYS can help transform your business with innovative IT solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <Button className="bg-white text-[#0e256e] hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition-all">
-                Contact Us
-              </Button>
-            </Link>
-            <Link to="/solutions">
-              <Button
-                variant="outline"
-                className="bg-white text-[#0e256e] hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition-all"
-              >
-                Our Solutions
-              </Button>
-            </Link>
+      {/* Mission Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className="inline-block">
+                <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+                  Our Story
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                20+ Years of Excellence
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Founded by seasoned networking professionals with two decades of hands-on experience, 
+                NETARK Technologies India Pvt. Ltd. has grown into a trusted partner for businesses 
+                seeking robust and secure IT infrastructure solutions and Internet services.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Our mission is simple: to empower businesses with IT systems that are secure, 
+                scalable, and built for performance.
+              </p>
+            </div>
+            <div className="bg-card rounded-2xl p-8 shadow-xl border border-border">
+              <div className="grid grid-cols-2 gap-6">
+                {expertise.map((item, index) => (
+                  <div key={index} className="flex flex-col items-center text-center gap-3 p-6 
+                                            bg-secondary/50 rounded-xl hover:bg-secondary 
+                                            transition-colors duration-300">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center 
+                                  justify-center text-primary">
+                      {item.icon}
+                    </div>
+                    <span className="text-sm font-semibold text-foreground">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-        </motion.div>
+        </div>
+      </section>
+
+      {/* Specializations */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Specializations
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {[
+              "Internet Services tailored for enterprises",
+              "Connectivity solutions including managed point-to-point, VPN, and long-distance fiber networks",
+              "Enterprise network design & implementation",
+              "Server co-location and hosting services",
+              "VPS & Cloud Solutions",
+              "Cybersecurity & information security services",
+              "Unified communications & mobility platforms",
+              "Open-source IT solutions"
+            ].map((spec, index) => (
+              <div key={index} className="flex items-start gap-4 p-6 bg-card rounded-xl 
+                                        shadow-md hover:shadow-lg transition-shadow duration-300 
+                                        border border-border">
+                <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-foreground font-medium">{spec}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Trusted Technology Partners
+          </h2>
+          <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">
+            We work with global leaders to ensure our clients get world-class technology 
+            backed by local expertise
+          </p>
+          <div className="flex flex-wrap justify-center gap-8 items-center">
+            {partners.map((partner, index) => (
+              <div key={index} className="px-6 py-3 bg-card rounded-lg shadow-md 
+                                        border border-border hover:border-primary/50 
+                                        transition-all duration-300">
+                <span className="text-foreground font-semibold">{partner}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-transparent">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center 
+                            justify-center text-primary mx-auto">
+                <Target className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground">Mission-Driven</h3>
+              <p className="text-muted-foreground">
+                Empowering businesses with secure, scalable IT infrastructure
+              </p>
+            </div>
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center 
+                            justify-center text-primary mx-auto">
+                <Award className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground">Excellence</h3>
+              <p className="text-muted-foreground">
+                Delivering world-class solutions with local expertise
+              </p>
+            </div>
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center 
+                            justify-center text-primary mx-auto">
+                <Users className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground">Partnership</h3>
+              <p className="text-muted-foreground">
+                Building long-term relationships based on trust
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <Footer />
